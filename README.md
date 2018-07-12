@@ -123,7 +123,7 @@ Translations of the guide are available in the following languages:
   end
   ```
 
-* <a name="crlf"></a>
+* :information_source:<a name="crlf"></a>
   Use Unix-style line endings. (\*BSD/Solaris/Linux/macOS users are covered by
   default, Windows users have to be extra careful.)
 <sup>[[link](#crlf)]</sup>
@@ -248,7 +248,7 @@ Translations of the guide are available in the following languages:
   foo&.bar
   ```
 
-* <a name="spaces-braces"></a>
+* :information_source:<a name="spaces-braces"></a>
   No spaces after `(`, `[` or before `]`, `)`.
   Use spaces around `{` and before `}`.
 <sup>[[link](#spaces-braces)]</sup>
@@ -796,7 +796,7 @@ Translations of the guide are available in the following languages:
    end
    ```
 
-* <a name="method-invocation-parens"></a>
+* :information_source:<a name="method-invocation-parens"></a>
   Use parentheses around the arguments of method invocations,
   especially if the first argument begins with an open parenthesis `(`,
   as in `f((3 + 2) + 1)`.
@@ -1080,7 +1080,7 @@ Translations of the guide are available in the following languages:
   result = some_condition ? something : something_else
   ```
 
-* <a name="use-if-case-returns"></a>
+* :information_source:<a name="use-if-case-returns"></a>
   Leverage the fact that `if` and `case` are expressions which return a
   result.
 <sup>[[link](#use-if-case-returns)]</sup>
@@ -1111,7 +1111,7 @@ Translations of the guide are available in the following languages:
   Do not use `when x; ...`. See the previous rule.
 <sup>[[link](#no-when-semicolons)]</sup>
 
-* <a name="bang-not-not"></a>
+* :information_source:<a name="bang-not-not"></a>
   Use `!` instead of `not`.
 <sup>[[link](#bang-not-not)]</sup>
 
@@ -1147,7 +1147,7 @@ Translations of the guide are available in the following languages:
   end
   ```
 
-* <a name="no-and-or-or"></a>
+* :information_source:<a name="no-and-or-or"></a>
   The `and` and `or` keywords are banned. The minimal added readability is just
   not worth the high probability of introducing subtle bugs. For boolean
   expressions, always use `&&` and `||` instead. For flow control, use
@@ -1228,7 +1228,7 @@ Translations of the guide are available in the following languages:
   do_something if some_condition && other_condition
   ```
 
-* <a name="unless-for-negatives"></a>
+* :information_source:<a name="unless-for-negatives"></a>
   Favor `unless` over `if` for negative conditions (or control flow `||`).
 <sup>[[link](#unless-for-negatives)]</sup>
 
@@ -1402,7 +1402,7 @@ condition](#safe-assignment-in-condition).
   end
   ```
 
-* <a name="single-action-blocks"></a>
+* :information_source:<a name="single-action-blocks"></a>
   Use the proc invocation shorthand when the invoked method is the only operation of a block.
 <sup>[[link](#single-action-blocks)]</sup>
 
@@ -1489,7 +1489,7 @@ condition](#safe-assignment-in-condition).
   end
   ```
 
-* <a name="no-self-unless-required"></a>
+* :information_source:<a name="no-self-unless-required"></a>
   Avoid `self` where not required. (It is only required when calling a self
   write accessor, methods named after reserved words, or overloadable operators.)
 <sup>[[link](#no-self-unless-required)]</sup>
@@ -1595,7 +1595,7 @@ condition](#safe-assignment-in-condition).
   x &&= y
   ```
 
-* <a name="double-pipe-for-uninit"></a>
+* :information_source:<a name="double-pipe-for-uninit"></a>
   Use `||=` to initialize variables only if they're not already initialized.
 <sup>[[link](#double-pipe-for-uninit)]</sup>
 
@@ -1610,7 +1610,7 @@ condition](#safe-assignment-in-condition).
   name ||= 'Bozhidar'
   ```
 
-* <a name="no-double-pipes-for-bools"></a>
+* :information_source:<a name="no-double-pipes-for-bools"></a>
   Don't use `||=` to initialize boolean variables. (Consider what would happen
   if the current value happened to be `false`.)
 <sup>[[link](#no-double-pipes-for-bools)]</sup>
@@ -1827,7 +1827,7 @@ no parameters.
   l.call(1)
   ```
 
-* <a name="underscore-unused-vars"></a>
+* :information_source:<a name="underscore-unused-vars"></a>
   Prefix with `_` unused block parameters and local variables. It's also
   acceptable to use just `_` (although it's a bit less descriptive). This
   convention is recognized by the Ruby interpreter and tools like RuboCop and
@@ -2028,11 +2028,11 @@ no parameters.
   at_exit { puts 'Goodbye!' }
   ```
 
-* <a name="no-flip-flops"></a>
-  Avoid the use of flip-flops.
+* :information_source:<a name="no-flip-flops"></a>
+  Avoid the use of flip-flops. (http://nithinbekal.com/posts/ruby-flip-flop/)
 <sup>[[link](#no-flip-flops)]</sup>
 
-* <a name="no-nested-conditionals"></a>
+* :information_source:<a name="no-nested-conditionals"></a>
   Avoid use of nested conditionals for flow of control.
 <sup>[[link](#no-nested-conditionals)]</sup>
 
@@ -2281,7 +2281,7 @@ no parameters.
   boolean, shouldn't end in a question mark.
 <sup>[[link](#bool-methods-qmark)]</sup>
 
-* <a name="bool-methods-prefix"></a>
+* :information_source:<a name="bool-methods-prefix"></a>
   Avoid prefixing predicate methods with the auxiliary verbs such as `is`,
   `does`, or `can`.  These words are redundant and inconsistent with the style of
   boolean methods in the Ruby core library, such as `empty?` and `include?`.
@@ -2391,7 +2391,7 @@ no parameters.
 > it even clearer. <br>
 > -- Steve McConnell
 
-* <a name="no-comments"></a>
+* :information_source:<a name="no-comments"></a>
   Write self-documenting code and ignore the rest of this section. Seriously!
 <sup>[[link](#no-comments)]</sup>
 
@@ -2639,7 +2639,7 @@ no parameters.
   end
   ```
 
-* <a name="file-classes"></a>
+* :information_source:<a name="file-classes"></a>
   Don't nest multi-line classes within classes. Try to have such nested
   classes each in their own file in a folder named like the containing class.
 <sup>[[link](#file-classes)]</sup>
@@ -2682,7 +2682,7 @@ no parameters.
   end
   ```
 
-* <a name="namespace-definition"></a>
+* :information_source:<a name="namespace-definition"></a>
   Define (and reopen) namespaced classes and modules using explicit nesting.
   Using the scope resolution operator can lead to surprising constant lookups
   due to Ruby's [lexical scoping](https://cirw.in/blog/constant-lookup.html),
@@ -3326,7 +3326,7 @@ no parameters.
   end
   ```
 
-* <a name="no-blind-rescues"></a>
+* :information_source:<a name="no-blind-rescues"></a>
   Avoid rescuing the `Exception` class.  This will trap signals and calls to
   `exit`, requiring you to `kill -9` the process.
 <sup>[[link](#no-blind-rescues)]</sup>
@@ -3595,7 +3595,7 @@ resource cleanup when possible.
   heroes.fetch(:supermann)
   ```
 
-* <a name="hash-fetch-defaults"></a>
+* :information_source:<a name="hash-fetch-defaults"></a>
   Introduce default values for hash keys via `Hash#fetch` as opposed to using
   custom logic.
 <sup>[[link](#hash-fetch-defaults)]</sup>
@@ -3626,7 +3626,7 @@ resource cleanup when possible.
   batman.fetch(:powers) { obtain_batman_powers }
   ```
 
-* <a name="hash-values-at"></a>
+* :information_source:<a name="hash-values-at"></a>
   Use `Hash#values_at` when you need to retrieve several values consecutively
   from a hash.
 <sup>[[link](#hash-values-at)]</sup>
@@ -3733,7 +3733,7 @@ resource cleanup when possible.
   email_with_name = format('%s <%s>', user.name, user.email)
   ```
 
-* <a name="consistent-string-literals"></a>
+* :information_source:<a name="consistent-string-literals"></a>
   Adopt a consistent string literal quoting style. There are two popular
   styles in the Ruby community, both of which are considered good&mdash;single
   quotes by default (Option A) and double quotes by default (Option B).
@@ -3832,7 +3832,7 @@ resource cleanup when possible.
   message = "This is the #{result}."
   ```
 
-* <a name="concat-strings"></a>
+* :information_source:<a name="concat-strings"></a>
   Avoid using `String#+` when you need to construct large data chunks.
   Instead, use `String#<<`. Concatenation mutates the string instance in-place
   and is always faster than `String#+`, which creates a bunch of new string
@@ -3920,7 +3920,7 @@ resource cleanup when possible.
   RUBY
   ```
 
-* <a name="heredoc-delimiters"></a>
+* :information_source:<a name="heredoc-delimiters"></a>
   Use descriptive delimiters for heredocs. Delimiters add valuable information
   about the heredoc content, and as an added bonus some editors can highlight
   code within heredocs if the correct delimiter is used.
@@ -4248,7 +4248,7 @@ resource cleanup when possible.
   end
   ```
 
-* <a name="no-method-missing"></a>
+* :information_source:<a name="no-method-missing"></a>
   Avoid using `method_missing` for metaprogramming because backtraces become
   messy, the behavior is not listed in `#methods`, and misspelled method calls
   might silently work, e.g. `nukes.launch_state = false`. Consider using
@@ -4388,7 +4388,7 @@ resource cleanup when possible.
   for trivial command line options.
 <sup>[[link](#optionparser)]</sup>
 
-* <a name="functional-code"></a>
+* :information_source:<a name="functional-code"></a>
   Code in a functional way, avoiding mutation when that makes sense.
 <sup>[[link](#functional-code)]</sup>
 
